@@ -4,13 +4,13 @@
       "id": 5,
       "name": "Rex",
       "image": "http://umich.edu/~chemh215/W11HTML/SSG5/ssg5.2/FRex.png",
-      "likes": 77
+      "likes": 80
     },
     {
       "id": 6,
       "name": "Yulia Y.",
       "image": "http://ae01.alicdn.com/kf/HTB1EzBceDZmx1VjSZFGq6yx2XXap.jpg",
-      "likes": 7
+      "likes": 12
     }
   ]
 }

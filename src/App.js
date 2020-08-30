@@ -55,23 +55,22 @@ class App extends React.Component{
                    })
   }
            //increasing likes 
-  handleLikes = ( toyId) =>{
-        
-    let likedToy = this.state.toyArray.find((obj)=>{return obj.id ===toyId})  
-    likedToy.likes += 1
+  handleLikes = (toy) =>{
+  
+    toy.likes  +=1 
     this.setState({...this.state, 
                    toyArray: this.state.toyArray
                   })
-
+   let toyId = toy.id
    let options=  { method: "PATCH",
                     headers: {"Content-Type": "application/json",
                     Accept: "application/json"
                    },
-                   body: JSON.stringify({likes: likedToy.likes})
+                   body: JSON.stringify({likes: toy.likes})
                   }
     fetch("http://www.localhost:8000/toys/"+toyId, options )
     .then(response => response.json())
-    .then (resp => { console.log(resp)})
+    
       
   }
 
