@@ -3,13 +3,16 @@ import React, { Component } from 'react';
 class ToyCard extends Component {
 
   render() {
+    
+let toyId = this.props.obj.id;
+
     return (
       <div className="card">
-        <h2>{'' /* Toy's Name */}</h2>
-        <img src={'' /* Toy's Image */} alt={/* Toy's Name */} className="toy-avatar" />
-        <p>{'' /* Toy's Likes */} Likes </p>
-        <button className="like-btn">Like {'<3'}</button>
-        <button className="del-btn">Donate to GoodWill</button>
+        <h2>{this.props.obj.name}</h2>
+        <img src={this.props.obj.image} alt={this.props.obj.name} className="toy-avatar" />
+        <p>{this.props.obj.likes} Likes </p>
+        <button className="like-btn" onClick = {() => this.props.handleLikes(toyId)}>Like {'<3'} </button>
+        <button className="del-btn" onClick = {() => this.props.handleDelete(toyId)}>Donate to GoodWill</button>
       </div>
     );
   }
